@@ -10,7 +10,7 @@
       $(".gallery").galleria({
         width:"auto",
         height: 0.43,
-        idleMode: true,
+        idleMode: false,
         responsive: true,
         idleTime: 2000,
         transitionSpeed: 200,
