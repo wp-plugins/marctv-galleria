@@ -3,7 +3,7 @@
   Plugin Name: MarcTV Galleria
   Plugin URI: http://www.marctv.de
   Description: Galleria
-  Version: 1.1
+  Version: 1.3
   Author: Marc Tönsing
   Author URI: http://www.marctv.de
   License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
@@ -23,7 +23,7 @@
 
 
 function marctv_galleria_head() {
-  $version = '1.0';
+  $version = '1.2';
 
   wp_enqueue_style(
           "jquery.marctv-galleria-style", 
