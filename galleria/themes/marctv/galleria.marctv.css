@@ -4,11 +4,6 @@
 
 #galleria-loader{height:1px!important}
 
-#content .attachment-thumbnail{
-  width: 460px;
-  height: 200px;
-}
-
 .galleria-container {
   position: relative;
   overflow: hidden;
@@ -16,10 +11,8 @@
 }
 
 .js #wrapper .gallery{
-  height: 422px;
   margin-bottom: 16px;
   overflow: hidden;
-  width: 960px;
 }
 
 .galleria-info-fullscreen {
@@ -202,7 +195,7 @@
 }
 
 .galleria-image-nav-left:hover{
-  background-position: 0 -162px;
+  background-position: -1px -161px;
 }
 
 .galleria-thumb-nav-left,
