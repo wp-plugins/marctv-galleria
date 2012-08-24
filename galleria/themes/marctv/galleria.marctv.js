@@ -3,7 +3,7 @@
  *
  */
  
-/*global jQuery, Galleria */
+/* global jQuery, Galleria */
 
 (function($) {
 
@@ -134,7 +134,7 @@
       
       this.bind('image', function(e) {
         if(e.index > 0 && this._options.idleMode !== true){
-          this._options.idleMode = true;
+          this._options.idleMode = false;
         }
         
         if(e.index > 0 && window._gat && window._gat._getTracker){

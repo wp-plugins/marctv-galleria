@@ -2,14 +2,15 @@
     
   $(document).ready(function($) {
     if($(".gallery").length > 0){
+      
       $('body').addClass('no-fullscreen');
       
       Galleria.loadTheme('/wp-content/plugins/marctv-galleria/galleria/themes/marctv/galleria.marctv.js');
       
       $(".gallery").galleria({
-        width:960,
-        height: 418,
-        idleMode: false,
+        width:"auto",
+        height: 0.43,
+        idleMode: true,
         responsive: true,
         idleTime: 2000,
         transitionSpeed: 200,
