@@ -2,8 +2,8 @@
 Contributors: MarcDK
 Tags: marctv, jquery, galleria, gallery, responsive, google analytics
 Requires at least: 3.0
-Tested up to: 3.3
-Stable tag: 1.1
+Tested up to: 3.4.1
+Stable tag: 1.4
 
 == Description ==
 
@@ -18,6 +18,19 @@ Includes Google Analytics Events, too!
 
 == Changelog ==
 
+= 1.4 =
+
+Idle mode fixed
+
+= 1.3 =
+
+Idle mode fixed
+
+= 1.2 =
+
+Responsive bug fixed
+
 = 1.1 =
 
 Initial release
+

@@ -3,7 +3,7 @@
  *
  */
  
-/*global jQuery, Galleria */
+/* global jQuery, Galleria */
 
 (function($) {
 

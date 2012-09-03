@@ -1,20 +1,21 @@
 (function($) {
     
   $(document).ready(function($) {
-    if($(".gallery").length > 0){
+    if($(".marctv-gallery").length > 0){
+      
       $('body').addClass('no-fullscreen');
       
       Galleria.loadTheme('/wp-content/plugins/marctv-galleria/galleria/themes/marctv/galleria.marctv.js');
       
-      $(".gallery").galleria({
-        width:960,
-        height: 418,
+      $(".marctv-gallery").galleria({
+        width:"auto",
+        height: 0.43,
         idleMode: false,
         responsive: true,
         idleTime: 2000,
         transitionSpeed: 200,
         initialTransition: "none",
-        debug: false,
+        debug: true,
         showInfo: true,
         imageCrop: true,
         imagePanSmoothness: 30,
