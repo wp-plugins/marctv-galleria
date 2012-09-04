@@ -20,7 +20,7 @@ Includes Google Analytics Events, too!
 
 = 1.4 =
 
-Idle mode fixed
+Added namespace prefix to class names for more compatibility.
 
 = 1.3 =
 
