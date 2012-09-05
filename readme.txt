@@ -3,7 +3,7 @@ Contributors: MarcDK
 Tags: marctv, jquery, galleria, gallery, responsive, google analytics
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable tag: 1.4
+Stable tag: 1.5
 
 == Description ==
 
@@ -18,9 +18,14 @@ Includes Google Analytics Events, too!
 
 == Changelog ==
 
+= 1.5 =
+
+* fixed position of info button
+* Added fix for IE8
+
 = 1.4 =
 
-Added namespace prefix to class names for more compatibility.
+Prefix added as namespace
 
 = 1.3 =
 

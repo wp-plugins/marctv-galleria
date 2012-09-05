@@ -15,7 +15,7 @@
         idleTime: 2000,
         transitionSpeed: 200,
         initialTransition: "none",
-        debug: true,
+        debug: false,
         showInfo: true,
         imageCrop: true,
         imagePanSmoothness: 30,
@@ -29,7 +29,8 @@
             title: $(img).attr('title'),
             description: $(img).parents('.gallery-item').find('.gallery-caption').text()
           };
-        }
+          
+       }
       });
     }
   });
