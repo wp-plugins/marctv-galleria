@@ -17,7 +17,11 @@
       _toggleInfo: true
     },
     init: function(options) {
-        
+      // detect svg and add body class
+      if (document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Shape", "1.1")) { 
+        $("body").addClass("svg");
+      }      
+
       // add some elements
       this.addElement('info-link','info-close','info-fullscreen');
       this.append({
