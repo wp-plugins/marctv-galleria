@@ -65,7 +65,7 @@
       this.$('info-fullscreen').click(function() {
         gal.toggleFullscreen(); // toggles the fullscreen
         if(window._gat && window._gat._getTracker){
-          _gaq.push(['_trackEvent', 'galleria', 'toggle fullscreen');
+          _gaq.push(['_trackEvent', 'galleria', 'toggle fullscreen']);
         }
       });
 
