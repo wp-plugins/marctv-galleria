@@ -2,8 +2,8 @@
 Contributors: MarcDK
 Tags: marctv, jquery, galleria, gallery, responsive, google analytics
 Requires at least: 3.0
-Tested up to: 3.4.1
-Stable tag: 1.6
+Tested up to: 3.4.2
+Stable tag: 1.7.1
 
 == Description ==
 
@@ -17,6 +17,10 @@ Includes Google Analytics Events, too!
 * Activate it
 
 == Changelog ==
+
+= 1.7 = 
+
+* disabled doubleclick for fullscreen on iOS
 
 = 1.6 =
 
