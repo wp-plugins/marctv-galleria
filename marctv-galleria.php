@@ -3,7 +3,7 @@
   Plugin Name: MarcTV Galleria
   Plugin URI: http://www.marctv.de
   Description: Replaces the gallery code with a neat sliding image gallery. Based on the mighty Galleria http://galleria.io/ it comes with responsiveness and touch events! Includes Google Analytics Events, too!
-  Version: 1.6
+  Version: 1.7
   Author: Marc Tönsing
   Author URI: http://www.marctv.de
   License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
