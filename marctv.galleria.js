@@ -21,7 +21,7 @@
         imagePanSmoothness: 30,
         fullscreenCrop: true,
         trueFullscreen: true,
-        fullscreenDoubleTap: true,
+        fullscreenDoubleTap: false,
         easing: 'galleriaOut',
         thumbnails: true,
         dataConfig: function(img) {
