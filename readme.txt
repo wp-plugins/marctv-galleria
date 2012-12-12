@@ -3,7 +3,7 @@ Contributors: MarcDK
 Tags: marctv, jquery, galleria, gallery, responsive, google analytics
 Requires at least: 3.0
 Tested up to: 3.5
-Stable tag: 1.7.2
+Stable tag: 1.7.3
 
 == Description ==
 
