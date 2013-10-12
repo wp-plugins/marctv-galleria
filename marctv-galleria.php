@@ -23,7 +23,7 @@
 
 
 function marctv_galleria_head() {
-  $version = '1.7.3';
+  $version = '1.7.4';
 
   wp_enqueue_style(
           "jquery.marctv-galleria-style", 
@@ -32,8 +32,8 @@ function marctv_galleria_head() {
 
   wp_enqueue_script(
           "marctv-galleria-js", 
-          WP_PLUGIN_URL . "/marctv-galleria/galleria/galleria-1.2.8.js",
-          array("jquery"), "1.2.8" , 0);
+          WP_PLUGIN_URL . "/marctv-galleria/galleria/galleria-1.2.9.js",
+          array("jquery"), "1.2.9" , 0);
  
   wp_enqueue_script(
           "marctv-galleria-theme", 
