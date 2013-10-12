@@ -22,22 +22,22 @@
 .galleria-info-fullscreen {
   background-color: #fff;
   border-bottom-right-radius: 3px;
-  background-position: -560px 2px;
+  background-position: -557px 3px;
   color: #000000;
   cursor: pointer;
   font: 600 90%/1 arial,sans-serif;
-  height: 18px;
+  height: 22px;
   padding: 4px;
   position: absolute;
   left: 0;
   top: 0;
-  width: 18px;
+  width: 23px;
   z-index: 10;
   box-shadow: 1px 1px 4px #333333;
 }
 
 .galleria-info-fullscreen:hover{
-  background-position: -530px 2px;
+  background-position: -527px 3px;
 }
 
 .galleria-info-close {
@@ -59,11 +59,11 @@
 
 
 .galleria-info-fullscreen.close{
-  background-position: -561px -29px;
+  background-position: -558px -27px;
 }
 
 .galleria-info-fullscreen.close:hover{
-  background-position: -531px -29px;
+  background-position: -528px -27px;
 }
 
 .galleria-container img {
@@ -90,7 +90,7 @@
   padding: 2px 6px;
   position: absolute;
   text-align: right;
-  bottom: 0;
+  bottom: -1px;
   z-index: 10;
   box-shadow: 1px -1px 4px #333333;
 }
@@ -105,7 +105,7 @@
   height: 18px;
   padding: 4px;
   position: absolute;
-  bottom: 0px;
+  bottom: -1px;
   right: 0px;
   display: none;
   z-index: 2;
@@ -183,7 +183,7 @@
   position: absolute;
   left: 10px;
   z-index: 2;
-  top: 40%;
+  top: 35%;
   background-position: 0 0;
 }
 

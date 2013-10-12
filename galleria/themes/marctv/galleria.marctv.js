@@ -50,7 +50,7 @@
           right:-50
         });
         this.addIdleState( this.get('counter'), {
-          opacity:0
+          // opacity:0
         });
         this.addIdleState( this.get('info-fullscreen'), {
           opacity:0
