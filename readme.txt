@@ -18,6 +18,11 @@ Includes Google Analytics Events, too!
 
 == Changelog ==
 
+
+= 1.8.2 =
+
+Updated Galleria to 1.3.2
+
 = 1.8 =
 
 Updated Galleria to 1.3.1 with touch events and fullscreen fix.

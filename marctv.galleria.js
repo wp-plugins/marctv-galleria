@@ -13,16 +13,14 @@
         idleMode: false,
         responsive: true,
         idleTime: 2000,
-        transitionSpeed: 200,
+        transitionSpeed: 300,
         initialTransition: "none",
         debug: false,
         showInfo: true,
         imageCrop: true,
-        imagePanSmoothness: 30,
         fullscreenCrop: true,
         trueFullscreen: true,
         fullscreenDoubleTap: false,
-        
         thumbnails: false,
         dataConfig: function(img) {
           return {
