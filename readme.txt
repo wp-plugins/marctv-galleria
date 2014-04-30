@@ -1,9 +1,9 @@
 === MarcTV Galleria  ===
 Contributors: MarcDK
-Tags: marctv, jquery, galleria, gallery, responsive, google analytics
+Tags: Marctv, jquery, galleria, gallery, responsive, google analytics
 Requires at least: 3.0
-Tested up to: 3.7.1
-Stable tag: 1.8.2
+Tested up to: 3.8.1
+Stable tag: 1.8.5
 
 == Description ==
 
@@ -18,6 +18,9 @@ Includes Google Analytics Events, too!
 
 == Changelog ==
 
+= 1.8.5 =
+
+Updated Galleria to 1.3.5
 
 = 1.8.2 =
 
