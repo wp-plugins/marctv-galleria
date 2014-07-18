@@ -1,15 +1,14 @@
 === MarcTV Galleria  ===
 Contributors: MarcDK
-Tags: Marctv, jquery, galleria, gallery, responsive, google analytics
+Tags: Marctv, jquery, galleria, gallery, responsive
 Requires at least: 3.0
-Tested up to: 3.8.1
-Stable tag: 1.8.5
+Tested up to: 3.9.1
+Stable tag: 2.0.1
 
 == Description ==
 
 Replaces the gallery code with a neat sliding image gallery. Based on the mighty 
 Galleria http://galleria.io/ it comes with responsiveness and touch events! 
-Includes Google Analytics Events, too!
 
 == Installation ==
 
@@ -17,6 +16,23 @@ Includes Google Analytics Events, too!
 * Activate it
 
 == Changelog ==
+
+= 2.0.1 =
+
+ * font-style fixes.
+
+= 2.0 =
+
+Big changes!
+
+* Updated Galleria to 1.3.6
+* MarcTV Galleria Theme is now based on the classic theme of galleria. Only css and 
+init js changes. Leaves original and solid working code working.
+* Thumbnails for devices greater than 800px.
+* New image style for thumbnails.
+* Real retina sprites. No SVG Sprites anymore. 
+* New black fullscreen theme. 
+* No Google Analytics Events anymore.
 
 = 1.8.5 =
 
