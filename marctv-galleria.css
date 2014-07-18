@@ -125,11 +125,10 @@ only screen and (min-device-pixel-ratio: 2) {
   background-position: -804px -4px;
   color: #000000;
   cursor: pointer;
-  font: 600 90%/1 arial,sans-serif;
   height: 22px;
   padding: 4px;
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   width: 23px;
   z-index: 10;
@@ -149,6 +148,8 @@ only screen and (min-device-pixel-ratio: 2) {
 .marctv-gallery .fullscreen .galleria-info-fullscreen {
   background-position: -866px -5px;
   background-color: #000;
+  position: absolute;
+  top: 40px;
 }
 
 .marctv-gallery .fullscreen .galleria-info-fullscreen:hover{
@@ -157,7 +158,7 @@ only screen and (min-device-pixel-ratio: 2) {
 }
 
 .marctv-gallery .galleria-info {
-  top: 35px;
+  top: 4px;
   left: 5px;
 }
 

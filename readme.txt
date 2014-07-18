@@ -3,7 +3,7 @@ Contributors: MarcDK
 Tags: Marctv, jquery, galleria, gallery, responsive
 Requires at least: 3.0
 Tested up to: 3.9.1
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 
 == Description ==
 
@@ -16,6 +16,10 @@ Galleria http://galleria.io/ it comes with responsiveness and touch events!
 * Activate it
 
 == Changelog ==
+
+= 2.0.2 =
+
+ * fullscreen issues fixed on iPad.
 
 = 2.0.1 =
 
