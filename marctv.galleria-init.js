@@ -52,7 +52,7 @@
           gallery.$('info-fullscreen').click(function() {
             gallery.toggleFullscreen(); // toggles the fullscreen
           });
-         
+
         }
       });
 
