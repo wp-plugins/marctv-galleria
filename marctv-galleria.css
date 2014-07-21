@@ -97,10 +97,10 @@ html .fullscreen .galleria-stage {
   bottom: 0px;
 }
 
-html .galleria-thumb-nav-left,
-html .galleria-thumb-nav-right,
-html .galleria-thumb-nav-left:hover,
-html .galleria-thumb-nav-right:hover {
+html .galleria-container .galleria-thumb-nav-left,
+html .galleria-container .galleria-thumb-nav-right,
+html .galleria-container .galleria-thumb-nav-left:hover,
+html .galleria-container .galleria-thumb-nav-right:hover {
   background-color: white;
 }
 
