@@ -1,53 +1,59 @@
-.marctv-gallery .galleria-container {
+html .galleria-container {
   background: transparent;
 }
 
-.marctv-gallery .galleria-stage {
+html .galleria-stage {
   top: 0;
   left: 0;
   right: 0;
 }
 
-.marctv-gallery .galleria-image-nav-right,
-.marctv-gallery .galleria-image-nav-left,
-.marctv-gallery .galleria-thumb-nav-right,
-.marctv-gallery .galleria-thumb-nav-left,
-.marctv-gallery .galleria-info-fullscreen {
+html .entry .gallery-caption {
+  display: none;
+}
+
+html .galleria-image-nav-right,
+html .galleria-image-nav-left,
+html .galleria-thumb-nav-right,
+html .galleria-thumb-nav-left,
+html .galleria-info-fullscreen {
   background-image: url(marctv-theme/classic-map.png);
   background-repeat: no-repeat;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+/* Use retina sprite */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
-  .marctv-gallery .galleria-image-nav-right,
-  .marctv-gallery .galleria-image-nav-left,
-  .marctv-gallery .galleria-thumb-nav-right,
-  .marctv-gallery .galleria-thumb-nav-left,
-  .marctv-gallery .galleria-info-fullscreen {
+  html .galleria-image-nav-right,
+  html .galleria-image-nav-left,
+  html .galleria-thumb-nav-right,
+  html .galleria-thumb-nav-left,
+  html .galleria-info-fullscreen {
     /* Reference the @2x Sprite */
     background-image: url(marctv-theme/classic-map@2x.png );
     /* Translate the @2x sprite's dimensions back to 1x */
-    background-size: 1016px 100px; 
+    background-size: 1016px 100px;
   }
 }
 
-.marctv-gallery .galleria-image-nav-right,
-.marctv-gallery .galleria-image-nav-left {
+
+html .galleria-image-nav-right,
+html .galleria-image-nav-left {
   -webkit-filter: drop-shadow(5px 5px 7px rgba(0,0,0,0.5));
   filter: url(#drop-shadow);
   -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=5, Color='#444')";
   filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=5, Color='#444')";
 }
 
-.no-thumbnails .marctv-gallery .galleria-stage {
+.no-thumbnails html .galleria-stage {
   bottom: 10px;
 }
 
-.is-touch .marctv-gallery .galleria-image-nav {
+html .touch .galleria-image-nav {
   display: block;
 }
 
-.marctv-gallery .galleria-loader {
+html .galleria-loader {
   background-color: #000;
   width: 16px;
   height: 16px;
@@ -58,12 +64,17 @@ only screen and (min-device-pixel-ratio: 2) {
   left: 37px;
   padding: 2px;
   z-index: 2;
-  background-image: url(galleria/themes/classic/classic-loader.gif);
   background-repeat: no-repeat;
 }
 
-.marctv-gallery .galleria-thumb-nav-left,
-.marctv-gallery .galleria-thumb-nav-right {
+html .galleria-info-link {
+  background-position: -667px -3px;
+  width: 25px;
+  height: 25px;
+}
+
+html .galleria-thumb-nav-left,
+html .galleria-thumb-nav-right {
   background-color: #111;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -73,35 +84,49 @@ only screen and (min-device-pixel-ratio: 2) {
   user-select: none;
 }
 
-.marctv-gallery .galleria-thumbnails-container {
+html .galleria-thumbnails-container {
   left: 0;
   right: 0;
 }
 
-.marctv-gallery .galleria-thumb-nav-left,
-.marctv-gallery .galleria-thumb-nav-right,
-.marctv-gallery .galleria-thumb-nav-left:hover,
-.marctv-gallery .galleria-thumb-nav-right:hover {
+html .fullscreen .galleria-thumbnails-container {
+  display: none;
+}
+
+html .fullscreen .galleria-stage {
+  bottom: 0px;
+}
+
+html .galleria-container .galleria-thumb-nav-left,
+html .galleria-container .galleria-thumb-nav-right,
+html .galleria-container .galleria-thumb-nav-left:hover,
+html .galleria-container .galleria-thumb-nav-right:hover {
   background-color: white;
 }
 
-.marctv-gallery .galleria-thumb-nav-left.disabled,
-.marctv-gallery .galleria-thumb-nav-right.disabled,
-.marctv-gallery .galleria-thumb-nav-left.disabled:hover,
-.marctv-gallery .galleria-thumb-nav-right.disabled:hover {
+html .galleria-thumb-nav-left.disabled,
+html .galleria-thumb-nav-right.disabled,
+html .galleria-thumb-nav-left.disabled:hover,
+html .galleria-thumb-nav-right.disabled:hover {
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
 
-.marctv-gallery .galleria-thumb-nav-left,
-.marctv-gallery .galleria-thumb-nav-right,
-.marctv-gallery .galleria-image-nav-left,
-.marctv-gallery .galleria-image-nav-right {
+html .galleria-thumb-nav-left,
+html .galleria-thumb-nav-right,
+html .galleria-image-nav-left,
+html .galleria-image-nav-right {
   opacity: 0.8;
   filter: alpha(opacity=80);
 }
 
-.marctv-gallery .galleria-counter {
+html .galleria-info-description {
+  font-size: 90%;
+  font-family: inherit;
+}
+
+
+html .galleria-counter {
   background-color: #FFFFFF;
   border-top-right-radius: 3px;
   color: #333;
@@ -114,12 +139,12 @@ only screen and (min-device-pixel-ratio: 2) {
   z-index: 10;
 }
 
-.marctv-gallery .fullscreen .galleria-counter {
+html .fullscreen .galleria-counter {
   background-color: #000;
   color: #fff;
 }
 
-.marctv-gallery .galleria-info-fullscreen {
+html .galleria-info-fullscreen {
   background-color: #fff;
   border-bottom-right-radius: 3px;
   background-position: -804px -4px;
@@ -131,37 +156,32 @@ only screen and (min-device-pixel-ratio: 2) {
   right: 0;
   top: 0;
   width: 23px;
-  z-index: 10;
+  z-index: 2;
+  display: block;
 }
 
-.marctv-gallery .galleria-info-description {
-  font-size: 100%;
-  font-family: inherit;
-}
-
-.marctv-gallery .galleria-info-fullscreen:hover {
+html .galleria-info-fullscreen:hover {
   opacity: 0.8;
   filter: alpha(opacity=80);
 }
 
 /* close button */
-.marctv-gallery .fullscreen .galleria-info-fullscreen {
-  background-position: -866px -5px;
-  background-color: #000;
-  position: absolute;
-  top: 40px;
+html .fullscreen .galleria-info-fullscreen {
+  background-position: -865px -4px;
+  background-color: black;
 }
 
-.marctv-gallery .fullscreen .galleria-info-fullscreen:hover{
-  opacity: 1;
-  filter: alpha(opacity=100);
+/* close button on touch devices */
+html .touch.fullscreen .galleria-info-fullscreen,
+html .touch.fullscreen .galleria-info {
+  top: 20px;
 }
 
-.marctv-gallery .galleria-info {
+html .galleria-info {
   top: 4px;
   left: 5px;
 }
 
-.marctv-gallery .gallery-item {
+html .gallery-item {
   width: 10%;
 }
