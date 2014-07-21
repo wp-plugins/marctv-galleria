@@ -42,11 +42,7 @@
 
           gallery.addElement('info-fullscreen');
           gallery.append({
-            'info': ['info-fullscreen']
-          });
-
-          gallery.append({
-            'stage': ['info-fullscreen']
+            'container': ['info-fullscreen']
           });
 
           gallery.$('info-fullscreen').click(function() {
