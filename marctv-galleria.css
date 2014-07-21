@@ -89,10 +89,16 @@ html .galleria-thumbnails-container {
   right: 0;
 }
 
+.no-thumbnails  .galleria-thumbnails-container {
+  display: none;
+  height: 0;
+}
+
 html .fullscreen .galleria-thumbnails-container {
   display: none;
 }
 
+.no-thumbnails .galleria-stage,
 html .fullscreen .galleria-stage {
   bottom: 0px;
 }
@@ -175,6 +181,11 @@ html .fullscreen .galleria-info-fullscreen {
 html .touch.fullscreen .galleria-info-fullscreen,
 html .touch.fullscreen .galleria-info {
   top: 20px;
+}
+
+html .touch.fullscreen .galleria-image-nav-left,
+html .touch.fullscreen .galleria-image-nav-right {
+  display: none;
 }
 
 html .galleria-info {

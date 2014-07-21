@@ -3,11 +3,11 @@
   $(document).ready(function($) {
 
     var thumbnails = true;
-    var height = 0.5;
+    var height = 0.53;
 
     if ($(window).width() < 800) {
       thumbnails = false;
-      height = 0.50;
+      height = 0.43;
       $("body").addClass('no-thumbnails');
     }
 
