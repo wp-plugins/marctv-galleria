@@ -80,7 +80,7 @@ Galleria.addTheme({
 
         this.bind('loadstart', function(e) {
             if (!e.cached) {
-                this.$('loader').show().fadeTo(200, 0.4);
+                this.$('loader').show().fadeTo(200, 1);
             }
             window.setTimeout(function() {
                 activate(e);

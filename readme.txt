@@ -3,7 +3,7 @@ Contributors: MarcDK
 Tags: MarcTV, jquery, galleria, gallery, responsive
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 2.2
+Stable tag: 2.3
 
 == Description ==
 
@@ -16,6 +16,14 @@ Galleria http://galleria.io/ it comes with responsiveness and touch events!
 * Activate it
 
 == Changelog ==
+
+= 2.3 =
+
+New Throbber position. 
+
+= 2.2 =
+
+Fixed CSS bug in thumb navigation.
 
 = 2.1 =
 

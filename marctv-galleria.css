@@ -57,10 +57,10 @@ html .galleria-theme-classic .galleria-loader {
   width: 16px;
   height: 16px;
   position: absolute;
-  top: 4px;
+  top: 50%;
   display: block;
   background-position: 2px 2px;
-  left: 37px;
+  left: 48%;
   padding: 2px;
   z-index: 2;
   background-repeat: no-repeat;
