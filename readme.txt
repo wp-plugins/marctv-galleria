@@ -1,9 +1,9 @@
 === MarcTV Galleria  ===
 Contributors: MarcDK
-Tags: Marctv, jquery, galleria, gallery, responsive
+Tags: MarcTV, jquery, galleria, gallery, responsive
 Requires at least: 3.0
-Tested up to: 3.9.1
-Stable tag: 2.0.6
+Tested up to: 4.0
+Stable tag: 2.2
 
 == Description ==
 
@@ -16,6 +16,11 @@ Galleria http://galleria.io/ it comes with responsiveness and touch events!
 * Activate it
 
 == Changelog ==
+
+= 2.1 =
+
+* Added Galleria 2.4 and Icons
+* Gallery now always links to the media file and not the media page. 
 
 = 2.0.6 =
 
