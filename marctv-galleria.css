@@ -40,7 +40,6 @@ only screen and (min-device-pixel-ratio: 2) {
 html .galleria-theme-classic .galleria-image-nav-right,
 html .galleria-theme-classic .galleria-image-nav-left {
   -webkit-filter: drop-shadow(5px 5px 7px rgba(0,0,0,0.5));
-  filter: url(#drop-shadow);
   -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=5, Color='#444')";
   filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=5, Color='#444')";
 }
@@ -75,7 +74,6 @@ html .galleria-theme-classic .galleria-info-link {
 
 html .galleria-theme-classic .galleria-thumb-nav-left,
 html .galleria-theme-classic .galleria-thumb-nav-right {
-  background-color: #111;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml .galleria-theme-classic-user-select: none;
@@ -103,10 +101,10 @@ html .galleria-theme-classic .fullscreen .galleria-stage {
   bottom: 0px;
 }
 
-html .galleria-theme-classic .galleria-container .galleria-thumb-nav-left,
-html .galleria-theme-classic .galleria-container .galleria-thumb-nav-right,
-html .galleria-theme-classic .galleria-container .galleria-thumb-nav-left:hover,
-html .galleria-theme-classic .galleria-container .galleria-thumb-nav-right:hover {
+html .galleria-theme-classic.galleria-container .galleria-thumb-nav-left,
+html .galleria-theme-classic.galleria-container .galleria-thumb-nav-right,
+html .galleria-theme-classic.galleria-container .galleria-thumb-nav-left:hover,
+html .galleria-theme-classic.galleria-container .galleria-thumb-nav-right:hover {
   background-color: white;
 }
 

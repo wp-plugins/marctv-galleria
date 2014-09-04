@@ -3,7 +3,7 @@ Contributors: MarcDK
 Tags: MarcTV, jquery, galleria, gallery, responsive
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 2.1
+Stable tag: 2.2
 
 == Description ==
 
