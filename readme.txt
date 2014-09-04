@@ -1,14 +1,14 @@
 === MarcTV Galleria  ===
 Contributors: MarcDK
-Tags: Marctv, jquery, galleria, gallery, responsive
+Tags: MarcTV, jquery, galleria, gallery, responsive, fullscreen
 Requires at least: 3.0
-Tested up to: 3.9.1
-Stable tag: 2.0.6
+Tested up to: 4.0
+Stable tag: 2.4
 
 == Description ==
 
-Replaces the gallery code with a neat sliding image gallery. Based on the mighty
-Galleria http://galleria.io/ it comes with responsiveness and touch events!
+A neat simple sliding image gallery. Based on the mighty
+Galleria http://galleria.io/ It comes with responsiveness, fullscreen mode and touch events!
 
 == Installation ==
 
@@ -16,6 +16,23 @@ Galleria http://galleria.io/ it comes with responsiveness and touch events!
 * Activate it
 
 == Changelog ==
+
+= 2.4 =
+
+* Just new meta information.
+
+= 2.3 =
+
+New Throbber position. 
+
+= 2.2 =
+
+Fixed CSS bug in thumb navigation.
+
+= 2.1 =
+
+* Updated to Galleria 4.2
+* Gallery now always links to the media file and not the media page. 
 
 = 2.0.6 =
 
