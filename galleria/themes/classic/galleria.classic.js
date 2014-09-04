@@ -24,7 +24,7 @@ Galleria.addTheme({
     },
     init: function(options) {
 
-        Galleria.requires(1.33, 'This version of Classic theme requires Galleria 1.3.3 or later');
+        Galleria.requires(1.4, 'This version of Classic theme requires Galleria 1.4 or later');
 
         // add some elements
         this.addElement('info-link','info-close');
@@ -35,9 +35,6 @@ Galleria.addTheme({
         // cache some stuff
         var info = this.$('info-link,info-close,info-text'),
             touch = Galleria.TOUCH;
-
-        // show loader & counter with opacity
-        //this.$('loader,counter').show().css('opacity', 0.4);
 
         // some stuff for non-touch browsers
         if (! touch ) {
@@ -83,7 +80,7 @@ Galleria.addTheme({
 
         this.bind('loadstart', function(e) {
             if (!e.cached) {
-                this.$('loader').show().fadeTo(200, 0.4);
+                this.$('loader').show().fadeTo(200, 1);
             }
             window.setTimeout(function() {
                 activate(e);
