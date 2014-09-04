@@ -4,7 +4,7 @@
   Plugin Name: MarcTV Galleria
   Plugin URI: http://marctv.de/blog/marctv-wordpress-plugins/
   Description: Replaces the gallery code with a neat sliding image gallery. Based on the mighty Galleria http://galleria.io/ it comes with responsiveness and touch events!
-  Version: 2.0.6
+  Version: 2.1
   Author: MarcDK
   Author URI: http://www.marctv.de
   License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
@@ -22,7 +22,7 @@
  */
 
 function marctv_galleria_head() {
-  $version = '2.0.6';
+  $version = '2.1';
 
   wp_enqueue_style(
       "jquery.marctv-galleria-style", WP_PLUGIN_URL . "/marctv-galleria/galleria/themes/classic/galleria.classic.css", false, $version);
@@ -31,7 +31,7 @@ function marctv_galleria_head() {
       "jquery.marctv-galleria-add-style", WP_PLUGIN_URL . "/marctv-galleria/marctv-galleria.css", false, $version);
 
   wp_enqueue_script(
-      "marctv-galleria-js", WP_PLUGIN_URL . "/marctv-galleria/galleria/galleria-1.3.6.js", array("jquery"), "1.3.6", 0);
+      "marctv-galleria-js", WP_PLUGIN_URL . "/marctv-galleria/galleria/galleria-1.4.2.js", array("jquery"), "1.4.2", 0);
 
   wp_enqueue_script(
       "marctv-galleria-theme", WP_PLUGIN_URL . "/marctv-galleria/galleria/themes/classic/galleria.classic.js", array("jquery"), $version, 0);
@@ -48,11 +48,13 @@ function marctv_gallery_atts($out, $pairs, $atts) {
 
   $atts = shortcode_atts(array(
     'columns' => '9',
+    'link' => 'file',
     'size' => 'galleria-thumb',
       ), $atts);
 
   $out['columns'] = $atts['columns'];
   $out['size'] = $atts['size'];
+  $out['link'] = $atts['link'];
 
   return $out;
 }
