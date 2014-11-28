@@ -4,7 +4,7 @@
   Plugin Name: MarcTV Galleria
   Plugin URI: http://marctv.de/blog/marctv-wordpress-plugins/
   Description: A neat simple sliding responsive image gallery. 
-  Version: 2.4
+  Version: 2.5.1
   Author: MarcDK
   Author URI: http://www.marctv.de
   License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
@@ -24,7 +24,7 @@
 class MarcTVGalleria
 {
 
-    private $version = '2.5';
+    private $version = '2.5.1';
     private $pluginPrefix = 'marctv-galleria';
     private $defaults = array(
         'imagesize' => 'full',

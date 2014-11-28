@@ -3,7 +3,7 @@ Contributors: MarcDK
 Tags: MarcTV, jquery, galleria, gallery, responsive, fullscreen, twentyfifteen
 Requires at least: 3.0
 Tested up to: 4.01
-Stable tag: 2.5
+Stable tag: 2.5.1
 
 == Description ==
 
@@ -20,7 +20,7 @@ Comes with a configurable image size for custom break point.
 
 == Changelog ==
 
-= 2.5 =
+= 2.5.1 =
 
 * Image size for window size breakpoint can be configured in the backend.
 * Choose an image size for gallery for this breakpoint.
