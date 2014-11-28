@@ -19,6 +19,9 @@ html .galleria-theme-classic .galleria-thumb-nav-left,
 html .galleria-theme-classic .galleria-info-fullscreen {
   background-image: url(marctv-theme/classic-map.png);
   background-repeat: no-repeat;
+  -webkit-box-sizing: initial;
+  -moz-box-sizing: initial;
+  box-sizing: initial;
 }
 
 /* Use retina sprite */

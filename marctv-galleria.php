@@ -21,54 +21,175 @@
 
  */
 
-function marctv_galleria_head() {
-  $version = '2.4';
+class MarcTVGalleria
+{
 
-  wp_enqueue_style(
-      "jquery.marctv-galleria-style", WP_PLUGIN_URL . "/marctv-galleria/galleria/themes/classic/galleria.classic.css", false, $version);
+    private $version = '2.5';
+    private $pluginPrefix = 'marctv-galleria';
+    private $defaults = array(
+        'imagesize' => 'full',
+        'breakpoint' => 800,
+        'breaksize' => 'medium'
+    );
 
-  wp_enqueue_style(
-      "jquery.marctv-galleria-add-style", WP_PLUGIN_URL . "/marctv-galleria/marctv-galleria.css", false, $version);
+    public function __construct()
+    {
+        load_plugin_textdomain('marctv-galleria', false, dirname(plugin_basename(__FILE__)) . '/language/');
 
-  wp_enqueue_script(
-      "marctv-galleria-js", WP_PLUGIN_URL . "/marctv-galleria/galleria/galleria-1.4.2.js", array("jquery"), "1.4.2", 0);
+        if (is_admin()) {
+            $this->backendInit();
+        }
 
-  wp_enqueue_script(
-      "marctv-galleria-theme", WP_PLUGIN_URL . "/marctv-galleria/galleria/themes/classic/galleria.classic.js", array("jquery"), $version, 0);
+        $this->frontendInit();
+    }
 
-  wp_enqueue_script(
-      "marctv-galleria-picasa-wrapper", WP_PLUGIN_URL . "/marctv-galleria/marctv.galleria-init.js", array("jquery"), $version, 1);
-}
+    /**
+     * Actions for backend.
+     */
+    public function backendInit()
+    {
+        add_action('admin_menu', array($this, 'registerSettingsPage'));
+        add_action('admin_init', array($this, 'registerSettings'));
+    }
 
-function marctv_gallery_style() {
-  return "<div class='marctv-gallery'>";
-}
+    /**
+     * Registers settings for plugin.
+     */
+    public function registerSettings()
+    {
 
-function marctv_gallery_atts($out, $pairs, $atts) {
+        register_setting($this->pluginPrefix . '-settings-group', $this->pluginPrefix . '-size');
+        register_setting($this->pluginPrefix . '-settings-group', $this->pluginPrefix . '-breakpoint');
+        register_setting($this->pluginPrefix . '-settings-group', $this->pluginPrefix . '-breaksize');
 
-  $atts = shortcode_atts(array(
-    'columns' => '9',
-    'link' => 'file',
-    'size' => 'galleria-thumb',
-      ), $atts);
+    }
 
-  $out['columns'] = $atts['columns'];
-  $out['size'] = $atts['size'];
-  $out['link'] = $atts['link'];
-  
-  return $out;
-}
 
-function marctv_galleria_add_new_image_size() {
-  if (function_exists('add_image_size')) {
-    add_image_size('galleria-thumb', 51, 40, true);
-  }
-}
+    /**
+     * Add a menu item to the admin bar.
+     */
+    public function registerSettingsPage()
+    {
+        add_options_page('MarcTV Galleria', 'MarcTV Galleria', 'manage_options', $this->pluginPrefix, array($this, 'showSettingsPage'));
+    }
 
-add_action('init', 'marctv_galleria_add_new_image_size');
+    /**
+     * Includes the settings page.
+     */
+    public function showSettingsPage()
+    {
+        include('pages/settings.php');
+    }
 
-add_filter('shortcode_atts_gallery', 'marctv_gallery_atts', 10, 3);
 
-add_filter('gallery_style', 'marctv_gallery_style', 99);
+    public function frontendInit()
+    {
+        add_action('wp_print_styles', array($this, 'enqueScripts'));
+        add_filter('gallery_style', array($this, 'galleryWrapper'), 99);
+        add_filter('wp_get_attachment_image_attributes', array($this, 'wpdocs_filter_gallery_img_atts'), 10, 2);
+        add_action('init', array($this, 'newImageSize'));
+        add_filter('shortcode_atts_gallery', array($this, 'galleryAttributes'), 10, 3);
+    }
 
-add_action('wp_print_styles', 'marctv_galleria_head');
+    public function galleryWrapper()
+    {
+        return "<div class='marctv-gallery'>";
+    }
+
+    /**
+     * Filter attributes for the current gallery image tag.
+     *
+     * @param array $atts Gallery image tag attributes.
+     * @param WP_Post $attachment WP_Post object for the attachment.
+     * @return array (maybe) filtered gallery image tag attributes.
+     */
+
+
+    public function wpdocs_filter_gallery_img_atts($atts, $attachment)
+    {
+        if ($full_size = wp_get_attachment_image_src($attachment->ID, 'full')) {
+            if (!empty($full_size[0])) {
+                $atts['data-big'] = $full_size[0];
+            }
+        }
+        if ($full_size = wp_get_attachment_image_src($attachment->ID, 'large')) {
+            if (!empty($full_size[0])) {
+                $atts['data-large'] = $full_size[0];
+            }
+        }
+
+        if ($full_size = wp_get_attachment_image_src($attachment->ID, 'medium')) {
+            if (!empty($full_size[0])) {
+                $atts['data-medium'] = $full_size[0];
+            }
+        }
+
+        if ($full_size = wp_get_attachment_image_src($attachment->ID, 'thumbnail')) {
+            if (!empty($full_size[0])) {
+                $atts['data-thumbnail'] = $full_size[0];
+            }
+        }
+
+        return $atts;
+    }
+
+    public function newImageSize()
+    {
+        if (function_exists('add_image_size')) {
+            add_image_size('galleria-thumb', 51, 40, true);
+        }
+    }
+
+    public function galleryAttributes($out, $pairs, $atts)
+    {
+
+        $atts = shortcode_atts(array(
+            'columns' => '9',
+            'link' => 'file',
+            'size' => 'galleria-thumb',
+        ), $atts);
+
+        $out['columns'] = $atts['columns'];
+        $out['size'] = $atts['size'];
+        $out['link'] = $atts['link'];
+
+        return $out;
+    }
+
+
+    public function enqueScripts()
+    {
+        wp_enqueue_style(
+            "jquery.marctv-galleria-style", WP_PLUGIN_URL . "/marctv-galleria/galleria/themes/classic/galleria.classic.css", false, $this->version);
+
+        wp_enqueue_style(
+            "jquery.marctv-galleria-add-style", WP_PLUGIN_URL . "/marctv-galleria/marctv-galleria.css", false, $this->version);
+
+        wp_enqueue_script(
+            "marctv-galleria-js", WP_PLUGIN_URL . "/marctv-galleria/galleria/galleria-1.4.2.js", array("jquery"), $this->version, 0);
+
+        wp_enqueue_script(
+            "marctv-galleria-theme", WP_PLUGIN_URL . "/marctv-galleria/galleria/themes/classic/galleria.classic.js", array("jquery"), $this->version, 0);
+
+        wp_enqueue_script(
+            "marctv-galleria-picasa-wrapper", WP_PLUGIN_URL . "/marctv-galleria/marctv.galleria-init.js", array("jquery"), $this->version, 1);
+
+
+        $imagesize = get_option($this->pluginPrefix . '-size',$this->defaults['imagesize']);
+        $breakpoint = get_option($this->pluginPrefix . '-breakpoint',$this->defaults['breakpoint']);
+        $imagesizebreak = get_option($this->pluginPrefix . '-breaksize',$this->defaults['breaksize']);
+
+
+
+        $jsvars = array(
+            'linksize' => $imagesize,
+            'breakpoint' => $breakpoint,
+            'breaksize' => $imagesizebreak
+        );
+
+        wp_localize_script('marctv-galleria-js', 'marctvgalleriajs', $jsvars);
+    }
+};
+
+
+new MarcTVGalleria();

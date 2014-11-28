@@ -2,13 +2,13 @@
 Contributors: MarcDK
 Tags: MarcTV, jquery, galleria, gallery, responsive, fullscreen
 Requires at least: 3.0
-Tested up to: 4.0
-Stable tag: 2.4
+Tested up to: 4.01
+Stable tag: 2.5
 
 == Description ==
 
 A neat simple sliding image gallery. Based on the mighty
-Galleria http://galleria.io/ It comes with responsiveness, fullscreen mode and touch events!
+Galleria http://galleria.io/ It comes with responsiveness, fullscreen mode and touch events.
 
 == Installation ==
 
@@ -17,9 +17,12 @@ Galleria http://galleria.io/ It comes with responsiveness, fullscreen mode and t
 
 == Changelog ==
 
-= 2.4 =
+= 2.5 =
 
-* Just new meta information.
+* Image size for window size breakpoint can be configured in the backend.
+* Choose an image size for gallery for this breakpoint.
+* Rewritten in OO PHP
+* New meta information.
 
 = 2.3 =
 
@@ -31,7 +34,7 @@ Fixed CSS bug in thumb navigation.
 
 = 2.1 =
 
-* Updated to Galleria 4.2
+* Updated to Galleria 1.4.2
 * Gallery now always links to the media file and not the media page. 
 
 = 2.0.6 =
