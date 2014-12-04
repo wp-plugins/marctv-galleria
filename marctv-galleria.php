@@ -3,8 +3,8 @@
 /*
   Plugin Name: MarcTV Galleria
   Plugin URI: http://marctv.de/blog/marctv-wordpress-plugins/
-  Description: A neat simple sliding responsive image gallery. 
-  Version: 2.5.1
+  Description: A neat simple sliding responsive image gallery with fullscreen support.
+  Version: 2.6
   Author: MarcDK
   Author URI: http://www.marctv.de
   License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
@@ -24,12 +24,13 @@
 class MarcTVGalleria
 {
 
-    private $version = '2.5.1';
+    private $version = '2.6';
     private $pluginPrefix = 'marctv-galleria';
     private $defaults = array(
         'imagesize' => 'full',
         'breakpoint' => 800,
-        'breaksize' => 'medium'
+        'breaksize' => 'medium',
+        'fullscreen' => 'full'
     );
 
     public function __construct()
@@ -57,10 +58,10 @@ class MarcTVGalleria
      */
     public function registerSettings()
     {
-
         register_setting($this->pluginPrefix . '-settings-group', $this->pluginPrefix . '-size');
         register_setting($this->pluginPrefix . '-settings-group', $this->pluginPrefix . '-breakpoint');
         register_setting($this->pluginPrefix . '-settings-group', $this->pluginPrefix . '-breaksize');
+        register_setting($this->pluginPrefix . '-settings-group', $this->pluginPrefix . '-fullscreen');
 
     }
 
@@ -109,7 +110,7 @@ class MarcTVGalleria
     {
         if ($full_size = wp_get_attachment_image_src($attachment->ID, 'full')) {
             if (!empty($full_size[0])) {
-                $atts['data-big'] = $full_size[0];
+                $atts['data-full'] = $full_size[0];
             }
         }
         if ($full_size = wp_get_attachment_image_src($attachment->ID, 'large')) {
@@ -178,13 +179,15 @@ class MarcTVGalleria
         $imagesize = get_option($this->pluginPrefix . '-size',$this->defaults['imagesize']);
         $breakpoint = get_option($this->pluginPrefix . '-breakpoint',$this->defaults['breakpoint']);
         $imagesizebreak = get_option($this->pluginPrefix . '-breaksize',$this->defaults['breaksize']);
+        $fullscreen = get_option($this->pluginPrefix . '-fullscreen',$this->defaults['fullscreen']);
 
 
 
         $jsvars = array(
             'linksize' => $imagesize,
             'breakpoint' => $breakpoint,
-            'breaksize' => $imagesizebreak
+            'breaksize' => $imagesizebreak,
+            'fullscreen' => $fullscreen
         );
 
         wp_localize_script('marctv-galleria-js', 'marctvgalleriajs', $jsvars);

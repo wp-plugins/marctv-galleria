@@ -5,10 +5,12 @@
         var thumbnails = true;
         var height = 0.53;
         var linksize = marctvgalleriajs.linksize;
+        var fullscreen = 'full';
 
 
         if ($(window).width() < marctvgalleriajs.breakpoint ) {
             linksize = marctvgalleriajs.breaksize;
+            fullscreen = marctvgalleriajs.fullscreen;
             thumbnails = false;
             height = 0.43;
             $("body").addClass('no-thumbnails');
@@ -36,7 +38,8 @@
                     return {
                         title: $(img).attr('title'),
                         description: $(img).parents('.gallery-item').find('.gallery-caption').text(),
-                        image: $(img).data(linksize)
+                        image: $(img).data(linksize),
+                        big: $(img).data(fullscreen)
                     };
 
                 },

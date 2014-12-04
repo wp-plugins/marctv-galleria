@@ -3,7 +3,7 @@ Contributors: MarcDK
 Tags: MarcTV, jquery, galleria, gallery, responsive, fullscreen, twentyfifteen
 Requires at least: 3.0
 Tested up to: 4.01
-Stable tag: 2.5.1
+Stable tag: 2.6
 
 == Description ==
 
@@ -19,6 +19,12 @@ Comes with a configurable image size for custom break point.
 * Configure under settings
 
 == Changelog ==
+
+= 2.6 =
+
+* Fixed fullscreen counter color.
+* Added option to select fullscreen image size after window breakpoint.
+* Added screenshots.
 
 = 2.5.1 =
 
@@ -125,3 +131,9 @@ Responsive bug fixed
 
 Initial release
 
+
+== Screenshots ==
+
+1. The plugin in action.
+2. The gallery in fullscreen mode.
+3. The settings page.
