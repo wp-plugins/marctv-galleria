@@ -4,7 +4,7 @@
   Plugin Name: MarcTV Galleria
   Plugin URI: http://marctv.de/blog/marctv-wordpress-plugins/
   Description: A neat simple sliding responsive image gallery with fullscreen support.
-  Version: 2.6
+  Version: 2.6.1
   Author: MarcDK
   Author URI: http://www.marctv.de
   License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
@@ -167,13 +167,13 @@ class MarcTVGalleria
             "jquery.marctv-galleria-add-style", WP_PLUGIN_URL . "/marctv-galleria/marctv-galleria.css", false, $this->version);
 
         wp_enqueue_script(
-            "marctv-galleria-js", WP_PLUGIN_URL . "/marctv-galleria/galleria/galleria-1.4.2.js", array("jquery"), $this->version, 0);
+            "marctv-galleria-js", WP_PLUGIN_URL . "/marctv-galleria/galleria/galleria-1.4.2.js", array("jquery"), $this->version, true);
 
         wp_enqueue_script(
-            "marctv-galleria-theme", WP_PLUGIN_URL . "/marctv-galleria/galleria/themes/classic/galleria.classic.js", array("jquery"), $this->version, 0);
+            "marctv-galleria-theme", WP_PLUGIN_URL . "/marctv-galleria/galleria/themes/classic/galleria.classic.js", array("jquery"), $this->version, true);
 
         wp_enqueue_script(
-            "marctv-galleria-picasa-wrapper", WP_PLUGIN_URL . "/marctv-galleria/marctv.galleria-init.js", array("jquery"), $this->version, 1);
+            "marctv-galleria-init", WP_PLUGIN_URL . "/marctv-galleria/marctv.galleria-init.js", array("jquery"), $this->version, true);
 
 
         $imagesize = get_option($this->pluginPrefix . '-size',$this->defaults['imagesize']);

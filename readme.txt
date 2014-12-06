@@ -3,7 +3,7 @@ Contributors: MarcDK
 Tags: MarcTV, jquery, galleria, gallery, responsive, fullscreen, twentyfifteen
 Requires at least: 3.0
 Tested up to: 4.01
-Stable tag: 2.6
+Stable tag: 2.6.1
 
 == Description ==
 
@@ -19,6 +19,10 @@ Comes with a configurable image size for custom break point.
 * Configure under settings
 
 == Changelog ==
+
+= 2.6.1 =
+
+* Fixed typo and moved scripts to load in the footer.
 
 = 2.6 =
 
