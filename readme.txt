@@ -2,7 +2,7 @@
 Contributors: MarcDK
 Tags: MarcTV, jquery, galleria, gallery, responsive, fullscreen, twentyfifteen
 Requires at least: 3.0
-Tested up to: 4.01
+Tested up to: 4.1
 Stable tag: 2.6.1
 
 == Description ==
