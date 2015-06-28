@@ -19,6 +19,9 @@ html .galleria-theme-classic .galleria-thumb-nav-left,
 html .galleria-theme-classic .galleria-info-fullscreen {
   background-image: url(marctv-theme/classic-map.png);
   background-repeat: no-repeat;
+  -webkit-box-sizing: initial;
+  -moz-box-sizing: initial;
+  box-sizing: initial;
 }
 
 /* Use retina sprite */
@@ -53,8 +56,8 @@ html .galleria-theme-classic.touch .galleria-image-nav {
 }
 
 html .galleria-theme-classic .galleria-loader {
-  background-color: #000;
-  width: 16px;
+  background-color: none;
+  width: 42px;
   height: 16px;
   position: absolute;
   top: 50%;
@@ -64,6 +67,7 @@ html .galleria-theme-classic .galleria-loader {
   padding: 2px;
   z-index: 2;
   background-repeat: no-repeat;
+    background-image: url(marctv-theme/loader.gif);
 }
 
 html .galleria-theme-classic .galleria-info-link {
@@ -143,7 +147,7 @@ html .galleria-theme-classic .galleria-counter {
   z-index: 10;
 }
 
-html .galleria-theme-classic .fullscreen .galleria-counter {
+html .galleria-theme-classic.fullscreen .galleria-counter {
   background-color: #000;
   color: #fff;
 }
