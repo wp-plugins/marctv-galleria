@@ -25,6 +25,7 @@
                 height: height,
                 idleMode: false,
                 responsive: true,
+                preload: 1,
                 idleTime: 2000,
                 initialTransition: "none",
                 debug: false,
